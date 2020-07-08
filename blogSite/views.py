@@ -5,7 +5,7 @@ from .filters import SearchForm
 
 def index(request):
     template = 'blogSite/index.html'
-    posts = BlogPost.objects.all().order_by('-date_created')[:5]
+    posts = BlogPost.objects.all().order_by('-date_created')[:4]
     active_project = Projects.objects.filter(status='Active')
     context = {
         'posts': posts,
