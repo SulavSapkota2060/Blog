@@ -79,14 +79,18 @@ WSGI_APPLICATION = 'myPost.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'NewDB',                      # Or path to database file if using sqlite3.
-       'USER': 'postgres',                      # Not used with sqlite3.
-        'PASSWORD': 'buildingwebapp',                  # Not used with sqlite3.
-        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-   
+   # 'default': {
+    #    'ENGINE': 'django.db.backends.postgresql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+     #   'NAME': 'MyDB',                      # Or path to database file if using sqlite3.
+      #  'USER': 'postgres',                      # Not used with sqlite3.
+     #   'PASSWORD': 'buildingwebapp',                  # Not used with sqlite3.
+     #   'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+     #   'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
+    #}
+    
 }
 import dj_database_url
 db_from_env = dj_database_url.config()
