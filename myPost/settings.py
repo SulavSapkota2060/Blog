@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'on53)!jomuaaxh^$gpn_j-wn37f86(^&(faoyayk_#u*)()32@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['mycheckapp.herokuapp.com','sulavsapkota.herokuapp.com',127.0.0.1']
+ALLOWED_HOSTS = ['mycheckapp.herokuapp.com','sulavsapkota.herokuapp.com','127.0.0.1']
 #ALLOWED_HOSTS = []
 
 # Application definition
@@ -135,4 +135,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'/static/images/')
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
